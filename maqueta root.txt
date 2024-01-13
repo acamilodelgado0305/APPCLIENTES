@@ -1,0 +1,29 @@
+import{Outlet, Link} from "react-router-dom";
+
+export default function Root() {
+  return (
+    <>
+      <div id="sidebar">
+        <nav>
+          <ul>
+          <li>
+              <Link to={`/`}>Home</Link>
+            </li>
+            <li>
+              <Link to={`/mensajes`}>Mensajes</Link>
+            </li>
+            <li>
+              <Link to={`/contacts/2`}>ChatBot</Link>
+            </li>
+            <li>
+              <Link to={`/contacts/2`}>Settings</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="detail">
+        <Outlet/>
+      </div>
+    </>
+  );
+}
